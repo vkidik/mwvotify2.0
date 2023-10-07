@@ -1,0 +1,224 @@
+:root{
+    --base-color: #242424;
+    --main-color: #121212;
+    --text-base: #ffffff;
+    --default-margin: 1.25em;
+    --border-default-radius: 1em;
+    --color-green-base: #1ed760
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--text-base);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.btn{
+    padding: calc(var(--default-margin) / 2) calc(var(--default-margin) * 1.5);
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+aside,  main{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+aside{
+    flex: none;
+    padding: var(--default-margin);
+    display: flex;
+    flex-direction: column;
+}
+
+aside header, aside #sect-login{
+    background-color: var(--base-color);
+    border-radius: var(--border-default-radius);
+}
+
+aside header{
+    flex: none;
+    display: flex;
+}
+
+aside header nav, aside header nav ul{
+    width: 100%;
+    height: auto;
+}
+
+aside header nav ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--default-margin);
+}
+
+aside header nav ul img{
+    width: 4em;
+    height: 4em;
+}
+
+aside header nav ul li a:hover img{
+    transform: scale(1.1);
+}
+
+aside header nav ul li .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside header nav ul li a:hover .container{
+    transform: scale(1.1);
+}
+
+aside header nav ul li a:hover .container .img{
+    background-color: #66666622;
+}
+
+aside header nav ul li a:hover .container .img img{
+    transform: scale(1);
+}
+
+aside header nav ul li .container .img{
+    width: 4em;
+    height: 4em;
+    border-radius: var(--border-default-radius);
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+aside header nav ul li .container .img img{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+
+aside #sect-login{
+    margin-top: var(--default-margin);
+    box-sizing: border-box;
+    flex: 1;
+    padding: calc(var(--default-margin) * 1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .name-sect{
+        font-size: 1.75em;
+    }
+}
+
+aside #sect-login #sect-login-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside #sect-login #sect-login-input .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+}
+
+aside #sect-login #sect-login-input .inputs .input{
+    width: 100%;
+    padding: calc(var(--default-margin) / 2);
+    background-color: #121212;
+    color: var(--text-base);
+    margin-top: calc(var(--default-margin) * 1.5);
+    font-size: 1.1em;
+    border-radius: calc(var(--border-default-radius) / 2);
+}
+
+aside #sect-login #sect-login-input .inputs .btn{
+    margin-top: calc(var(--default-margin) * 1.5);
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: calc(var(--border-default-radius) * 0.5);
+    background-color: var(--color-green-base);
+}
+
+aside #sect-login #sect-login-input .inputs .btn:hover{
+    filter: brightness(0.8);
+}
+
+aside #sect-login #sect-login-input .inputs .btn:active{
+    transform: scale(0.9);
+}
+
+aside #sect-login #sect-login-spotify{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    & > :not(:first-child){
+        margin-top: calc(var(--default-margin) * 1.5);
+    } 
+}
+
+aside #sect-login #sect-login-spotify button{
+    width: 100%;
+    background-color: var(--color-green-base);
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+aside #sect-login #sect-login-spotify #login-spotify{
+    background-color: #ffffff;
+    color: #121212;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+aside #sect-login #sect-login-spotify .btn:hover{
+    filter: brightness(0.9);
+}
+
+aside #sect-login #sect-login-spotify .btn:active{
+    transform: scale(0.9);
+}
+
+aside #sect-login .mwvotify{
+    flex: 1;
+    margin: calc(var(--default-margin) * 2)  0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside #sect-login .mwvotify h1{
+    margin-bottom: var(--default-margin);
+}
+
+aside #sect-login .mwvotify img{
+    width:50%;
+    height: auto;
+}
+
+main{
+    padding: var(--default-margin);
+    flex: 1;
+}

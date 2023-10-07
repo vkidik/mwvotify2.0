@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://api.spotify.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWVotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="https://spotify.com"><img src="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" alt="spotify"></a></li>
+                    <li>
+                        <a href="#">
+                            <div class="container">
+                                <div class="img">
+                                    <img src="https://i.scdn.co/image/ab67757000003b82736a17c952e1ce0384933fe9" alt="user" id="user-img">
+                                </div>
+                                <h3 id="user-name">Username</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#"><div class="img"><img src="solar_playlist-outline.png" alt="playlists" id="playlists"></div></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="sect-login" class="sect-login">
+            <div id="sect-login-input">
+                <h2 class="name-sect">Login by data - API token</h2>
+                <div class="inputs">
+                    <input type="text" class="input" placeholder="ACCOUNT API_TOKEN">
+                    <input type="text" class="input" placeholder="ACCOUNT CLIENT_ID">
+                    <input type="text" class="input" placeholder="ACCOUNT REDIRECT_URI">
+                    <button type="submit" id="login-input" class="btn">Login</button>
+                </div>
+            </div>
+            <!-- <div id="sect-login-spotify" class="sect-login">
+                <h2 class="name-sect">Login by Spotify</h2>
+                <a class="btn" id="login-spotify" href="#">Login</a>
+                <button class="btn copy-link">Copy link for login in another device</button>
+            </div> -->
+        </section>
+    </aside>
+    <main>
+        <section id="player">
+            <div class="gradient-container">
+                <h2>Your music player!</h2>
+            </div>
+            <div class="player">
+                <img src="track" alt="track">
+                <h3 id="song-name">Song Name</h3>
+                <h4 id="song-author">Song Author</h4>
+                <div class="btns btn-player">
+                    <button class="btn"><<</button>
+                    <button class="btn">></button>
+                    <button class="btn">>></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
